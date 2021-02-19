@@ -180,7 +180,7 @@ class PyTorchModelContext(ModelContext):
 
         y_cols = np.array(y_cols)
         for feature in x_cols:
-            x_cols[feature] = np.array(x_cols[feature])
+            x_cols[feature] = np.array(x_cols[feature], dtype=None)
 
         self.logger.info("------ Record Data ------")
         self.logger.info("x_cols:    %d", len(list(x_cols.values())[0]))
